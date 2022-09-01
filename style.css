@@ -33,6 +33,21 @@ main {
 .patrick{
   user-select: none;
   cursor: pointer;
+  
+}
+.patrick:hover{
+  transform: scale(1.05);
+}
+.patrick:active{
+  filter: brightness(80%);
+}
+.patrickTwo{
+  user-select: none;
+    cursor: pointer;
+}
+.patrickTwo:hover{
+  transform: scale(1.05);
+
 }
 
 #red-filter {

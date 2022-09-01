@@ -34,7 +34,7 @@
           <div>
             <p>hp: <span id="jimbob-health">100</span></p>
             <p>gold: <span id="jimbob-gold">0</span></p>
-            <p class="mb-0" onclick="usePotion('jimbob')">
+            <p class="mb-0 patrick" onclick="usePotion('jimbob')">
               potions: <span id="jimbob-potion">0</span>
             </p>
           </div>
@@ -48,7 +48,7 @@
           <div>
             <p>hp: <span id="duke-health">150</span></p>
             <p>gold: <span id="duke-gold">0</span></p>
-            <p class="mb-0" onclick="usePotion('duke')">
+            <p class="mb-0 patrick" onclick="usePotion('duke')">
               potions: <span id="duke-potion">0</span>
             </p>
           </div>
@@ -58,9 +58,9 @@
         <!-- NOTE Boss -->
         <div
           onclick="damageBoss()"
-          class="col-8 col-xl-6 border patrick border-dark bg-dark text-light p-3 text-center"
+          class="col-8 col-xl-6 patrickTwo bg-dark text-light text-center g-0"
         >
-          <div id="red-filter">
+          <div class="p-3" id="red-filter">
             <!-- NOTE Healthbar -->
             <div id="maxHealthBar" class="mb-2">
               <div id="currentHealthBar"></div>
@@ -78,7 +78,7 @@
         <div class="col-md-5 border border-dark text-light m-3 p-3 bg-dark">
           <div
             onclick="buyPotion()"
-            class="store-item d-flex justify-content-between"
+            class="store-item patrick d-flex justify-content-between"
           >
             <p>Buy potion</p>
             <p>20G</p>
