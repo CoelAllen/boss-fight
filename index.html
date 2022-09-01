@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Boss Fight!</title>
+  </head>
+
+  <body>
+    <main class="container-fluid">
+      <!-- NOTE gamescreen -->
+      <section class="row gap-md-3 g-0">
+        <!-- NOTE heroes -->
+        <div class="col-md-3 m-md-3 p-3 bg-dark text-light border border-dark">
+          <!-- NOTE hero1 -->
+          <div class="d-flex justify-content-between">
+            Jimbob
+            <img class="hero-img" src="jimbob.png" alt="" />
+          </div>
+          <div>
+            <p>hp: <span id="jimbob-health">100</span></p>
+            <p>gold: <span id="jimbob-gold">0</span></p>
+            <p class="mb-0" onclick="usePotion('jimbob')">
+              potions: <span id="jimbob-potion">0</span>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 my-3 p-3 bg-dark text-light border border-dark">
+          <!-- NOTE hero1 -->
+          <div class="d-flex justify-content-between">
+            Duke
+            <img class="hero-img" src="duke.png" alt="" />
+          </div>
+          <div>
+            <p>hp: <span id="duke-health">150</span></p>
+            <p>gold: <span id="duke-gold">0</span></p>
+            <p class="mb-0" onclick="usePotion('duke')">
+              potions: <span id="duke-potion">0</span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="row justify-content-center">
+        <!-- NOTE Boss -->
+        <div
+          onclick="damageBoss()"
+          class="col-8 col-xl-6 border patrick border-dark bg-dark text-light p-3 text-center"
+        >
+          <div id="red-filter">
+            <!-- NOTE Healthbar -->
+            <div id="maxHealthBar" class="mb-2">
+              <div id="currentHealthBar"></div>
+            </div>
+
+            <div>
+              <h1>MINOS</h1>
+            </div>
+            <img class="img-fluid boss-img" src="boss.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <!-- NOTE store -->
+        <div class="col-md-5 border border-dark text-light m-3 p-3 bg-dark">
+          <div
+            onclick="buyPotion()"
+            class="store-item d-flex justify-content-between"
+          >
+            <p>Buy potion</p>
+            <p>20G</p>
+          </div>
+          <div class="store-item d-flex justify-content-between">
+            <p>Buy peasant</p>
+            <p>50G</p>
+          </div>
+          <div class="store-item d-flex justify-content-between">
+            <p>Buy Goku</p>
+            <p>1000G</p>
+          </div>
+        </div>
+        <!-- NOTE reset button -->
+        <button class="btn btn-danger" onclick="resetGame()">REPLAY</button>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
